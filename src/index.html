@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="top-image"></div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Ready to launch in...</h1>
+        <div class="time">
+          <ul>
+            <li>Dias</li>
+            <li>Horas</li>
+            <li>Minutos</li>
+            <li>Segundos</li>
+          </ul>
+          <p id="countdown"></p>
+        </div>
+
+        <div class="footer">
+          <p>Inscreva-se para saber mais sobre o lançamento</p>
+
+          <button class="subscribe" onclick="Modal.toggle()">
+            Inscreva-se
+          </button>
+        </div>
+      </div>
+      
+      <div class="image-rocket"></div>
+    </main>
+
+    <div class="modal-overlay active">
+      <div class="modal">
+        <div id="form">
+          <h2>Inscreva-se</h2>
+          <form action="">
+            <div class="input-group">
+              <label for="name">Nome: </label>
+              <input type="text" name="name" id="name" placeholder="Nome" />
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </div>
+
+            <div class="input-group actions">
+              <a href="#" onclick="Modal.toggle()">Cancelar</a>
+              <button class="button" onclick="Modal.send()">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="bottom-image"></div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
